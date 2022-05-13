@@ -3,37 +3,29 @@ fetch(getlistURL).then((response) => {
 	return response.json();
 }).then((data) => {
 	var urls = data
-	document.cookie = "userID=252298";
+	document.cookie = "userID=252299";
 	var AllOthers = []
 	setTimeout(() => {
 		console.log("here")
 		document.querySelectorAll('.userpicture').forEach(function (el) {
-			let currentID = el.src.match(/[0-9]{6}/g)
+			let currentID = el.src.match(/25[0-9]{4}/g)
 			console.log(currentID)
-			if (getCookie("userID").includes(currentID.contains)) {
-				console.log('REYged');
-				if (!el.classList.contains("reyged")) {
-					var image = "https://lms.univ-cotedazur.fr/pluginfile.php/" + getCookie("userID") + "/user/icon/fordson/f3"
+			if (!el.classList.contains("reyged")) {
+				console.log(urls[currentID])
+				if (urls[currentID] != undefined) {
+
+					var image = urls[currentID]
 					var width = el.offsetWidth;
 					var height = el.offsetHeight;
 					el.classList.add("reyged");
 					el.setAttribute("src", image);
 					el.style.width = width + "px";
 					el.style.height = height + "px";
-				}
-			} else {
-				console.log('REYged');
-				if (!el.classList.contains("reyged")) {
-					console.log(document.cookie[document.cookie.indexOf("userID")])
-					var image = "https://lms.univ-cotedazur.fr/pluginfile.php/" +urls[currentID] + "/user/icon/fordson/f3"
-					var width = el.offsetWidth;
-					var height = el.offsetHeight;
-					el.classList.add("reyged");
-					el.setAttribute("src", image);
-					el.style.width = width + "px";
-					el.style.height = height + "px";
+
 				}
 			}
+
+
 
 
 		});
