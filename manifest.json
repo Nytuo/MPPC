@@ -2,7 +2,7 @@
    "content_scripts": [ {
       "all_frames": true,
       "js": [ "js/nrey.js" ],
-      "matches": [ "http://*/*", "https://*/*" ]
+      "matches": [ "https://lms.univ-cotedazur.fr/*" ]
    } ],
    "description": "Retreive the profile picture freedom on moodle",
    "icons": {
