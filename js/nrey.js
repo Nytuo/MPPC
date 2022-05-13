@@ -10,10 +10,9 @@ fetch(getlistURL).then((response) => {
 		document.querySelectorAll('.userpicture').forEach(function (el) {
 			let currentID = el.src.match(/[0-9]{6}/g)
 			console.log(currentID)
-			if (getCookie("userID").contains(currentID.contains)) {
+			if (getCookie("userID").includes(currentID.contains)) {
 				console.log('REYged');
 				if (!el.classList.contains("reyged")) {
-					console.log(document.cookie[document.cookie.indexOf("userID")])
 					var image = "https://lms.univ-cotedazur.fr/pluginfile.php/" + getCookie("userID") + "/user/icon/fordson/f3"
 					var width = el.offsetWidth;
 					var height = el.offsetHeight;
