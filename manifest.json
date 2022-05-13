@@ -1,0 +1,16 @@
+{
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/nrey.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Retreive the profile picture freedom on moodle",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "manifest_version": 3,
+   "name": "MPPC",
+   "version": "1.0"
+}
